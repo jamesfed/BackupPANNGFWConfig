@@ -5,9 +5,9 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 #Change these values to match the hostname of the NGFW, you may want to create a dedicated apiadmin account (Superuser (read-only) has the correct permissions required)
-$PaloAddress = "ngfw.example.com"
-$PaloUser = "apiadmin"
-$PaloPass = "PasswordsAreBestWhenTheyAreThreeRandomWordsOrMore"
+$PaloAddress = 'ngfw.example.com'
+$PaloUser = 'apiadmin'
+$PaloPass = 'PasswordsAreBestWhenTheyAreThreeRandomWordsOrMore'
 
 #Get a API key and transform the result
 $CredsOutput = Invoke-WebRequest -Uri "https://$PaloAddress/api/?type=keygen&user=$PaloUser&password=$PaloPass"
